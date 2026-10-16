@@ -1,4 +1,4 @@
-import {schedule,isDue,dueLabel,stateName} from './engine.js?v=0.3.1';
+import {schedule,isDue,dueLabel,stateName} from './engine.js?v=0.4.0-dev.1';
 const app=document.getElementById('app'),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const uid=()=>crypto.randomUUID?.()||Date.now()+'-'+Math.random();
 const APP_VERSION='0.4.0-dev.1';
