@@ -10,3 +10,7 @@ test('visible version comes from build constant',()=>{assert.match(src,/V'\+APP_
 test('failed ratings stay in session for short-term relearning',()=>{assert.match(src,/queue\.push\(c\.id\)/);assert.match(src,/等待重学<\/h2>/);assert.match(src,/setTimeout\(\(\)=>\{if\(tab==='study'\)render\(\)\}/)});
 test('backup import validates deck references and duplicate identifiers',()=>{assert.match(src,/const validBackup=/);assert.match(src,/ids\.has\(c\.id\)/);assert.match(src,/decks\.has\(c\.deckId\)/)});
 test('offline dictionary accepts expired local entries',()=>{assert.match(src,/\|\|!navigator\.onLine/);assert.match(src,/已过期，仅供参考/)});
+
+test('new-card quota counts distinct cards rather than repeated failures',()=>{assert.match(src,/const todayNewCount=\(\)=>new Set\(state\.logs/);assert.match(src,/\.map\(l=>l\.cardId\)\)\.size/)});
+test('image lookup does not fall back to unrelated same-word sense',()=>{assert.match(src,/let c=active\?\.front===word\?active:null/)});
+test('PWA update prompt requires installed worker',()=>{assert.match(src,/worker\.state==='installed'/);assert.match(src,/reload-update/)});
