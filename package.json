@@ -1,0 +1,1 @@
+{"name":"yici-pwa","private":true,"version":"0.2.0","type":"module","scripts":{"start":"npx --yes serve . -l 4173","test":"node --test"}}
