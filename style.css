@@ -23,3 +23,13 @@ select{width:100%;border:1px solid #d9e0eb;background:white;border-radius:12px;p
 
 /* V0.4 development: dashboard and dictionary senses */
 .forecast{display:grid;gap:8px}.forecast>div{display:flex;justify-content:space-between;background:white;border:1px solid #e9edf3;border-radius:12px;padding:12px 15px}.forecast span{color:#64748b}.forecast b{font-variant-numeric:tabular-nums}.details details{border-top:1px solid #e9edf3;padding:10px 0}.details summary{cursor:pointer;color:#365acb;font-weight:600}.details em{font-size:12px;color:#64748b}.nav{z-index:20}.flash button{max-width:100%}
+
+/* V0.4.0 appearance preferences */
+:root[data-theme="dark"]{color-scheme:dark;--dark-bg:#101827;--dark-panel:#1c293c;--dark-text:#e7edf6;--dark-border:#344258}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--dark-bg:#101827;--dark-panel:#1c293c;--dark-text:#e7edf6;--dark-border:#344258}}
+:root[data-theme="dark"] body,:root:not([data-theme="light"]) body{background:var(--dark-bg,#f6f8fc);color:var(--dark-text,#152039)}
+:root[data-theme="dark"] .flash,:root[data-theme="dark"] .panel,:root[data-theme="dark"] .item,:root[data-theme="dark"] .deckrow,:root[data-theme="dark"] .metrics>div,:root[data-theme="dark"] .forecast>div,:root[data-theme="dark"] .nav,:root[data-theme="dark"] button:not(.primary):not(.rate-easy):not(.rate-hard):not(.rate-again),
+:root:not([data-theme="light"]) .flash,:root:not([data-theme="light"]) .panel,:root:not([data-theme="light"]) .item,:root:not([data-theme="light"]) .deckrow,:root:not([data-theme="light"]) .metrics>div,:root:not([data-theme="light"]) .forecast>div,:root:not([data-theme="light"]) .nav{background:var(--dark-panel,#fff);color:var(--dark-text,#152039);border-color:var(--dark-border,#e9edf3)}
+:root[data-theme="dark"] input,:root[data-theme="dark"] textarea,:root[data-theme="dark"] select{background:#26354b;color:#e7edf6;border-color:#465773}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) input,:root:not([data-theme="light"]) textarea,:root:not([data-theme="light"]) select{background:#26354b;color:#e7edf6;border-color:#465773}}
+.sense-picker select{margin-top:5px}
