@@ -20,3 +20,6 @@
 select{width:100%;border:1px solid #d9e0eb;background:white;border-radius:12px;padding:14px;margin-top:8px}
 .panel h2:not(:first-child){margin-top:22px}
 #lookup-status{margin:4px 0 14px}
+
+/* V0.4 development: dashboard and dictionary senses */
+.forecast{display:grid;gap:8px}.forecast>div{display:flex;justify-content:space-between;background:white;border:1px solid #e9edf3;border-radius:12px;padding:12px 15px}.forecast span{color:#64748b}.forecast b{font-variant-numeric:tabular-nums}.details details{border-top:1px solid #e9edf3;padding:10px 0}.details summary{cursor:pointer;color:#365acb;font-weight:600}.details em{font-size:12px;color:#64748b}.nav{z-index:20}.flash button{max-width:100%}
