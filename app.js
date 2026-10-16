@@ -1,6 +1,7 @@
-import {schedule,isDue,dueLabel,stateName} from './engine.js';
+import {schedule,isDue,dueLabel,stateName} from './engine.js?v=0.3.1';
 const app=document.getElementById('app'),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const uid=()=>crypto.randomUUID?.()||Date.now()+'-'+Math.random();
+const APP_VERSION='0.3.1';
 let db,state,tab='home',deckId='starter',editId=null,queue=[],flipped=false,undo=null,done=0,busy=false,search='';
 const demo=[['resilient','有韧性的；恢复力强的'],['elaborate','详尽的；精心制作的'],['subtle','微妙的'],['inevitable','不可避免的'],['contemplate','沉思；考虑'],['profound','深刻的'],['versatile','用途广泛的'],['coherent','连贯的'],['diligent','勤勉的'],['ambiguous','模棱两可的']];
 const initial=()=>({version:1,decks:[{id:'starter',name:'英语核心词汇'}],cards:demo.map(([front,back])=>({id:uid(),deckId:'starter',front,back,due:0,reps:0,created:Date.now()})),logs:[],settings:{dailyNew:20,retention:.9},created:Date.now()});
